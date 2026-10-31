@@ -1,0 +1,20 @@
+{
+    "name": "AskWise: AI Chat Assistant",
+    "short_name": "AskWise",
+    "description": "AI chat, notes, recording and agenda for Android",
+    "icons": [
+        {
+            "src": "assets/img/chatpro-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/chatpro-app-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone",
+    "theme_color": "#08152c",
+    "background_color": "#08152c"
+}

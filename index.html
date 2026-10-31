@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#08152c" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="description"
+        content="Meet AskWise: AI Chat Assistant, your smart AI assistant for web search, meeting transcription, smart notes, reminders and Android widgets. Explore the features and start free." />
+    <title>AskWise: AI Chat Assistant — Meeting Notes &amp; Daily Agenda for Android</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AskWise: AI Chat Assistant — Meeting Notes &amp; Daily Agenda for Android" />
+    <meta property="og:description"
+        content="Meet AskWise: AI Chat Assistant, your smart AI assistant for web search, meeting transcription, smart notes, reminders and Android widgets. Explore the features and start free." />
+    <meta property="og:image" content="assets/img/chatpro-social-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="home-page"><svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-2-5.8L4 11l6-2.2z" />
+            <path
+                d="m19 18 .7 2.1L22 21l-2.3.9L19 24l-.8-2.1L16 21l2.2-.9zM5 2l.7 2.3L8 5l-2.3.7L5 8l-.7-2.3L2 5l2.3-.7z" />
+        </symbol>
+        <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17 17 7M7 7h10v10" />
+        </symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14m-6-6 6 6-6 6" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 12 4 4L19 6" />
+        </symbol>
+        <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="m8 12 3 3 5-6" />
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+        </symbol>
+        <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M18 6 6 18M6 6l12 12" />
+        </symbol>
+        <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6" />
+        </symbol>
+        <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6" />
+        </symbol>
+        <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="10.8" cy="10.8" r="6.8" />
+            <path d="m16 16 5 5" />
+        </symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M3 12h18M12 3c6 6 6 12 0 18M12 3c-6 6-6 12 0 18" />
+        </symbol>
+        <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="2.8" width="6" height="12" rx="3" />
+            <path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3m-4 0h8" />
+        </symbol>
+        <symbol id="i-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+            <path d="M14 2v5h5M9 13h6M9 17h6" />
+        </symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="16" rx="2" />
+            <path d="M7 2v6m10-6v6M3 10h18m-12 5 2 2 4-4" />
+        </symbol>
+        <symbol id="i-layout-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-3.7 8-10V5l-8-3-8 3v7c0 6.3 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="10" width="14" height="11" rx="2" />
+            <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        </symbol>
+        <symbol id="i-headphones" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v7H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2ZM20 14h-3v7h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2Z" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="m3 7 9 6 9-6" />
+        </symbol>
+        <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m22 2-7 20-4-9-9-4zM22 2 11 13" />
+        </symbol>
+        <symbol id="i-circle-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M9.5 9a2.5 2.5 0 1 1 4.1 2l-1.6 1.4V14M12 17h.01" />
+        </symbol>
+        <symbol id="i-rotate-ccw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11a9 9 0 1 1 2.5 7M3 3v8h8" />
+        </symbol>
+        <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="2" width="12" height="20" rx="2" />
+            <path d="M11 18h2" />
+        </symbol>
+        <symbol id="i-volume-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m11 5-5 4H3v6h3l5 4zM15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12" />
+        </symbol>
+        <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m8 5 12 7-12 7z" />
+        </symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+        </symbol>
+        <symbol id="i-badge-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="m12 2 2.6 1.9 3.2.1 1 3 2.5 2-1 3 1 3-2.5 2-1 3-3.2.1L12 22l-2.6-1.9-3.2-.1-1-3-2.5-2 1-3-1-3 2.5-2 1-3 3.2-.1z" />
+            <path d="m8 12 3 3 5-6" />
+        </symbol>
+        <symbol id="i-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h14v7a7 7 0 0 1-14 0zM18 8h2a3 3 0 0 1 0 6h-2M3 21h16" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m16 3 5 5-3 1-4 5-3 1-5 5-2-2 5-5 1-3 5-4z" />
+        </symbol>
+        <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h16M4 17h16M9 4v6M15 14v6" />
+        </symbol>
+        <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+        </symbol>
+        <symbol id="i-cloud-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m2 2 20 20M9 4a7 7 0 0 1 9 7 5 5 0 0 1 2.5 7.5M4 10a5 5 0 0 0 1 10h12" />
+        </symbol>
+        <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2 4 13h7l-1 9 10-12h-7z" />
+        </symbol>
+        <symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m2 8 5 4 5-7 5 7 5-4-2 12H4z" />
+        </symbol>
+        <symbol id="i-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a9 9 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3a8.5 8.5 0 0 1 8.5 8.5Z" />
+        </symbol>
+        <symbol id="i-list-todo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="5" height="5" rx="1" />
+            <path d="m4.5 6.5 1 1 2-2M12 6h9M12 15h9M4 14h4v4H4z" />
+        </symbol>
+        <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 11v6M12 7h.01" />
+        </symbol>
+        <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 5a3 3 0 0 1 3-3h14v17H7a3 3 0 0 0-3 3zM4 5v17" />
+        </symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="8" width="13" height="13" rx="2" />
+            <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" />
+        </symbol>
+    </svg><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+        <div class="container header-inner"><a class="brand" href="index.html" aria-label="AskWise home"><span
+                    class="brand-symbol"><img src="assets/img/chatpro-logo.png" width="46" height="46"
+                        alt="" /></span><span>AskWise<span class="brand-dot">.</span></span></a>
+            <nav class="desktop-nav" aria-label="Main navigation"><a href="#features" class="nav-link ">Features</a><a
+                    href="#how-it-works" class="nav-link ">How It Works</a><a href="#pricing"
+                    class="nav-link ">Pricing</a><a href="terms/termsandconditions.html" class="nav-link ">Terms & Conditions</a><a
+                    href="privacy/privacypolicy.html" class="nav-link ">Privacy Policy</a><a
+                    href="https://sites.google.com/view/askwise/support" class="nav-link " target="_blank"
+                    rel="noopener noreferrer">Support</a></nav>
+            <div class="header-actions"><a href="https://play.google.com/store/apps/details?id=com.chatpro.assistant"
+                    class="header-download" target="_blank" rel="noopener noreferrer"><svg class="icon " width="16"
+                        height="16" aria-hidden="true">
+                        <use href="#i-play"></use>
+                    </svg><span>Get on Google Play</span><svg class="icon " width="15" height="15" aria-hidden="true">
+                        <use href="#i-arrow-up-right"></use>
+                    </svg></a><button class="menu-toggle" type="button" aria-label="Open navigation menu"
+                    aria-expanded="false" aria-controls="mobile-menu"><svg class="icon " width="23" height="23"
+                        aria-hidden="true">
+                        <use href="#i-menu"></use>
+                    </svg></button></div>
+        </div>
+        <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden><a href="#features"
+                class="nav-link ">Features</a><a href="#how-it-works" class="nav-link ">How It Works</a><a
+                href="#pricing" class="nav-link ">Pricing</a><a href="terms/termsandconditions.html" class="nav-link ">Terms &
+                Conditions</a><a href="privacy/privacypolicy.html" class="nav-link ">Privacy Policy</a><a
+                href="https://sites.google.com/view/askwise/support" class="nav-link " target="_blank"
+                rel="noopener noreferrer">Support</a><a class="mobile-store"
+                href="https://play.google.com/store/apps/details?id=com.chatpro.assistant" target="_blank"
+                rel="noopener noreferrer">Download on Google Play <svg class="icon " width="20" height="20"
+                    aria-hidden="true">
+                    <use href="#i-arrow-up-right"></use>
+                </svg></a></nav>
+    </header>
+    <main id="main">
+        <section class="hero" id="home">
+            <div class="hero-noise"></div>
+            <div class="hero-aurora"></div>
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <div class="eyebrow hero-pill"><span class="pulse-dot"></span> All-in-one AI companion <span
+                            class="pill-divider"></span> Made for Android <svg class="icon " width="14" height="14"
+                            aria-hidden="true">
+                            <use href="#i-arrow-up-right"></use>
+                        </svg></div>
+                    <h1>Your smart AI assistant for <span>work, meetings</span> & daily life.</h1>
+                    <p class="hero-description">One beautifully simple place to chat with AI, search the live web,
+                        capture meeting notes, and stay on top of your day.</p>
+                    <div class="hero-ctas"><a href="https://play.google.com/store/apps/details?id=com.chatpro.assistant"
+                            class="play-badge " target="_blank" rel="noopener noreferrer"
+                            aria-label="Get AskWise on Google Play"><svg class="play-brand" viewBox="0 0 28 31"
+                                aria-hidden="true">
+                                <path fill="#32CE69" d="M1 1 15 15.5 1 30z" />
+                                <path fill="#00B8F5" d="m1 1 18 11-4 3.5z" />
+                                <path fill="#FBC03B" d="m15 15.5 12-7v14z" />
+                                <path fill="#F85166" d="M1 30 19 19l-4-3.5z" />
+                            </svg><span><small>GET IT ON</small><strong>Google Play</strong></span></a><a
+                            class="hero-secondary" href="#features">Explore what’s inside <svg class="icon " width="18"
+                                height="18" aria-hidden="true">
+                                <use href="#i-arrow-right"></use>
+                            </svg></a></div>
+                    <div class="hero-reassurance"><span><svg class="icon " width="16" height="16" aria-hidden="true">
+                                <use href="#i-check-circle"></use>
+                            </svg> No account required</span><span><svg class="icon " width="16" height="16"
+                                aria-hidden="true">
+                                <use href="#i-shield"></use>
+                            </svg> Local-first storage</span><span><svg class="icon " width="16" height="16"
+                                aria-hidden="true">
+                                <use href="#i-bolt"></use>
+                            </svg> Built for everyday flow</span></div>
+                </div>
+                <div class="phone-stage" aria-label="Illustrations of the AskWise Android app">
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+                    <div class="floating-chip chip-search"><svg class="icon " width="19" height="19" aria-hidden="true">
+                            <use href="#i-globe"></use>
+                        </svg> <span>Live web answers</span></div>
+                    <div class="floating-chip chip-record"><svg class="icon " width="19" height="19" aria-hidden="true">
+                            <use href="#i-mic"></use>
+                        </svg> <span>Meeting notes</span></div>
+                    <div class="floating-chip chip-agenda"><svg class="icon " width="18" height="18" aria-hidden="true">
+                            <use href="#i-check-circle"></use>
+                        </svg> <span>Your day, sorted</span></div>
+                    <div class="phone phone-back">
+                        <div class="phone-cutout"></div>
+                        <div class="phone-screen">
+                            <div class="phone-status"><span>9:41</span><span>●●● ▰</span></div>
+                            <div class="mini-back">‹ <span>Meeting intelligence</span></div>
+                            <div class="meeting-live"><span class="recording-dot"></span> Meeting in progress
+                                <span>12:48</span>
+                            </div>
+                            <div class="waveform" aria-hidden="true"><i style="height:12px"></i><i
+                                    style="height:17px"></i><i style="height:30px"></i><i style="height:20px"></i><i
+                                    style="height:40px"></i><i style="height:25px"></i><i style="height:14px"></i><i
+                                    style="height:38px"></i><i style="height:52px"></i><i style="height:22px"></i><i
+                                    style="height:32px"></i><i style="height:18px"></i><i style="height:44px"></i><i
+                                    style="height:12px"></i><i style="height:26px"></i><i style="height:48px"></i><i
+                                    style="height:21px"></i><i style="height:37px"></i><i style="height:16px"></i><i
+                                    style="height:42px"></i><i style="height:28px"></i><i style="height:18px"></i><i
+                                    style="height:35px"></i><i style="height:12px"></i><i style="height:26px"></i><i
+                                    style="height:40px"></i><i style="height:17px"></i><i style="height:30px"></i><i
+                                    style="height:13px"></i><i style="height:24px"></i></div>
+                            <div class="mini-section-label">AI MEETING SUMMARY</div>
+                            <div class="meeting-summary-card">
+                                <div class="mini-row"><svg class="icon " width="17" height="17" aria-hidden="true">
+                                        <use href="#i-check-circle"></use>
+                                    </svg><b>Decisions</b></div><small>Approved new homepage direction</small>
+                            </div>
+                            <div class="meeting-summary-card">
+                                <div class="mini-row"><svg class="icon " width="17" height="17" aria-hidden="true">
+                                        <use href="#i-list-todo"></use>
+                                    </svg><b>Action items</b></div><small>3 tasks assigned and organized</small>
+                            </div>
+                            <div class="meeting-summary-card">
+                                <div class="mini-row"><svg class="icon " width="17" height="17" aria-hidden="true">
+                                        <use href="#i-sparkles"></use>
+                                    </svg><b>Key takeaways</b></div><small>Ready to review and share</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone phone-front">
+                        <div class="phone-cutout"></div>
+                        <div class="phone-screen">
+                            <div class="phone-status"><span>9:41</span><span>●●● ▰</span></div>
+                            <div class="phone-app-heading">
+                                <div class="mini-logo"><img src="assets/img/chatpro-logo.png" alt="" /></div>
+                                <span>AskWise</span><span class="pro-crown"><svg class="icon " width="16" height="16"
+                                        aria-hidden="true">
+                                        <use href="#i-crown"></use>
+                                    </svg></span>
+                            </div>
+                            <div class="phone-greeting"><span class="sunny">✦</span>
+                                <h3>Good morning!</h3>
+                                <p>How can I help you today?</p>
+                            </div>
+                            <div class="app-tile-grid">
+                                <div class="app-tile t-blue"><svg class="icon " width="23" height="23"
+                                        aria-hidden="true">
+                                        <use href="#i-message-circle"></use>
+                                    </svg><span>AI Chat</span></div>
+                                <div class="app-tile t-violet"><svg class="icon " width="23" height="23"
+                                        aria-hidden="true">
+                                        <use href="#i-mic"></use>
+                                    </svg><span>Meeting<br />Recorder</span></div>
+                                <div class="app-tile t-gold"><svg class="icon " width="23" height="23"
+                                        aria-hidden="true">
+                                        <use href="#i-file-text"></use>
+                                    </svg><span>Smart Notes</span></div>
+                                <div class="app-tile t-cyan"><svg class="icon " width="23" height="23"
+                                        aria-hidden="true">
+                                        <use href="#i-calendar"></use>
+                                    </svg><span>My Agenda</span></div>
+                            </div>
+                            <div class="prompt-teaser"><span class="prompt-dot"><svg class="icon " width="17"
+                                        height="17" aria-hidden="true">
+                                        <use href="#i-sparkles"></use>
+                                    </svg></span><span>Ask AskWise anything...</span><svg class="icon " width="16"
+                                    height="16" aria-hidden="true">
+                                    <use href="#i-send"></use>
+                                </svg></div>
+                            <div class="phone-tabbar"><span class="active"><svg class="icon " width="17" height="17"
+                                        aria-hidden="true">
+                                        <use href="#i-message-circle"></use>
+                                    </svg><small>Chat</small></span><span><svg class="icon " width="17" height="17"
+                                        aria-hidden="true">
+                                        <use href="#i-file-text"></use>
+                                    </svg><small>Notes</small></span><span><svg class="icon " width="17" height="17"
+                                        aria-hidden="true">
+                                        <use href="#i-calendar"></use>
+                                    </svg><small>Agenda</small></span><span><svg class="icon " width="17" height="17"
+                                        aria-hidden="true">
+                                        <use href="#i-layout-grid"></use>
+                                    </svg><small>More</small></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hero-bottom"><span>ONE APP. ENDLESS POSSIBILITIES.</span>
+                <div class="hero-bottom-icons"><span><svg class="icon " width="18" height="18" aria-hidden="true">
+                            <use href="#i-message-circle"></use>
+                        </svg> Chat</span><span><svg class="icon " width="18" height="18" aria-hidden="true">
+                            <use href="#i-globe"></use>
+                        </svg> Search</span><span><svg class="icon " width="18" height="18" aria-hidden="true">
+                            <use href="#i-mic"></use>
+                        </svg> Record</span><span><svg class="icon " width="18" height="18" aria-hidden="true">
+                            <use href="#i-file-text"></use>
+                        </svg> Note</span><span><svg class="icon " width="18" height="18" aria-hidden="true">
+                            <use href="#i-calendar"></use>
+                        </svg> Plan</span></div>
+            </div>
+        </section>
+        <section class="section features-section" id="features">
+            <div class="container">
+                <div class="section-intro intro-center reveal"><span class="section-kicker"><span
+                            class="kicker-line"></span> THE ASKWISE EXPERIENCE</span>
+                    <h2>One powerful app.<br /><span class="text-gradient">Everything just clicks.</span></h2>
+                    <p>Thoughtful productivity tools designed to move with you—from the first idea to the final action.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card card-wide reveal">
+                        <div class="feature-card-top"><span class="feature-icon"><svg class="icon " width="24"
+                                    height="24" aria-hidden="true">
+                                    <use href="#i-globe"></use>
+                                </svg></span><span class="feature-number">01 / 05</span></div>
+                        <h3>Real-time AI chat & web search</h3>
+                        <p>Ask complex questions, explore timely topics, and get helpful answers with links to sources
+                            when web search is used.</p>
+                        <div class="feature-mini-search"><span class="mini-search-ico"><svg class="icon " width="20"
+                                    height="20" aria-hidden="true">
+                                    <use href="#i-search"></use>
+                                </svg></span><span>What’s happening in tech today?</span><svg class="icon " width="20"
+                                height="20" aria-hidden="true">
+                                <use href="#i-arrow-up-right"></use>
+                            </svg></div>
+                    </article>
+                    <article class="feature-card  reveal">
+                        <div class="feature-card-top"><span class="feature-icon"><svg class="icon " width="24"
+                                    height="24" aria-hidden="true">
+                                    <use href="#i-mic"></use>
+                                </svg></span><span class="feature-number">02 / 05</span></div>
+                        <h3>Voice & meeting notes</h3>
+                        <p>Record meetings, transcribe with AI, and turn conversations into decisions, action items, and
+                            concise summaries.</p>
+                        <div class="feature-wave-mini"><i style="height:10px"></i><i style="height:24px"></i><i
+                                style="height:37px"></i><i style="height:16px"></i><i style="height:43px"></i><i
+                                style="height:28px"></i><i style="height:14px"></i><i style="height:35px"></i><i
+                                style="height:50px"></i><i style="height:22px"></i><i style="height:39px"></i><i
+                                style="height:11px"></i><i style="height:31px"></i><i style="height:21px"></i><i
+                                style="height:42px"></i><i style="height:18px"></i><i style="height:32px"></i><i
+                                style="height:14px"></i><i style="height:25px"></i><i style="height:13px"></i><i
+                                style="height:37px"></i><i style="height:20px"></i><i style="height:31px"></i><i
+                                style="height:10px"></i><i style="height:19px"></i></div>
+                    </article>
+                    <article class="feature-card  reveal">
+                        <div class="feature-card-top"><span class="feature-icon"><svg class="icon " width="24"
+                                    height="24" aria-hidden="true">
+                                    <use href="#i-file-text"></use>
+                                </svg></span><span class="feature-number">03 / 05</span></div>
+                        <h3>Smart notes & color coding</h3>
+                        <p>Capture ideas, pin what matters, and organize rich Markdown notes with customizable colors.
+                        </p>
+                        <div class="color-dots"><i></i><i></i><i></i><i></i><i></i></div>
+                    </article>
+                    <article class="feature-card  reveal">
+                        <div class="feature-card-top"><span class="feature-icon"><svg class="icon " width="24"
+                                    height="24" aria-hidden="true">
+                                    <use href="#i-calendar"></use>
+                                </svg></span><span class="feature-number">04 / 05</span></div>
+                        <h3>Daily agenda & reminders</h3>
+                        <p>Stay on track with simple task checklists and timely local notifications, all in one focused
+                            workspace.</p>
+                        <div class="feature-todo"><span>✓</span> Finish weekly planning</div>
+                    </article>
+                    <article class="feature-card  reveal">
+                        <div class="feature-card-top"><span class="feature-icon"><svg class="icon " width="24"
+                                    height="24" aria-hidden="true">
+                                    <use href="#i-layout-grid"></use>
+                                </svg></span><span class="feature-number">05 / 05</span></div>
+                        <h3>Home screen widgets</h3>
+                        <p>See today’s priorities, open notes instantly, and jump into your workflow from your Android
+                            home screen.</p>
+                        <div class="widgets-mini"><span>09 <small>OCT</small></span><span>3
+                                <small>TASKS</small></span><span>＋ <small>NOTE</small></span></div>
+                    </article>
+                </div>
+                <div class="section-end-note">The assistant you need, without the app-hopping. <a
+                        href="#how-it-works">See how AskWise works <svg class="icon " width="16" height="16"
+                            aria-hidden="true">
+                            <use href="#i-arrow-right"></use>
+                        </svg></a></div>
+            </div>
+        </section>
+        <section class="section workflow-section" id="how-it-works">
+            <div class="container">
+                <div class="workflow-heading reveal">
+                    <div><span class="section-kicker light-kicker"><span class="kicker-line"></span> SIMPLICITY, BUILT
+                            IN</span>
+                        <h2>From thought to done.<br /><span>In a few taps.</span></h2>
+                    </div>
+                    <p>Whether you’re preparing for your next meeting or organizing your morning, AskWise keeps
+                        everything flowing naturally.</p>
+                </div>
+                <div class="workflow-layout">
+                    <div class="steps-list">
+                        <div class="step-item reveal">
+                            <div class="step-index">01</div>
+                            <div>
+                                <h3>Ask anything</h3>
+                                <p>Get quick AI answers or search the web for timely information—with useful sources
+                                    when available.</p>
+                            </div>
+                        </div>
+                        <div class="step-item reveal">
+                            <div class="step-index">02</div>
+                            <div>
+                                <h3>Capture the moments</h3>
+                                <p>Record a meeting or a voice note and transform it into a structured, reviewable
+                                    summary.</p>
+                            </div>
+                        </div>
+                        <div class="step-item reveal">
+                            <div class="step-index">03</div>
+                            <div>
+                                <h3>Turn insight into action</h3>
+                                <p>Save what matters to notes, check off tasks, and see your priorities on your home
+                                    screen.</p>
+                            </div>
+                        </div>
+                        <div class="step-footnote"><svg class="icon " width="18" height="18" aria-hidden="true">
+                                <use href="#i-sparkles"></use>
+                            </svg> Your ideas deserve a smarter workflow.</div>
+                    </div>
+                    <div class="workflow-art reveal"><img src="assets/img/feature-voice.svg"
+                            alt="Illustrated meeting recording with audio waveform" loading="lazy" />
+                        <div class="workflow-image-caption">
+                            <div class="workflow-icon"><svg class="icon " width="23" height="23" aria-hidden="true">
+                                    <use href="#i-sparkles"></use>
+                                </svg></div>
+                            <div><strong>Meeting summary, ready.</strong><span>Decisions. Action items. Key
+                                    takeaways.</span></div><svg class="icon " width="22" height="22" aria-hidden="true">
+                                <use href="#i-check-circle"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section showcase-section">
+            <div class="container">
+                <div class="showcase-row reveal">
+                    <div class="showcase-copy"><span class="section-kicker"><span class="kicker-line"></span> SMARTER,
+                            NOT BUSIER</span>
+                        <h2>Beautifully organized.<br /><span class="text-gradient">Naturally productive.</span></h2>
+                        <p>Your notes and agenda work together, making it easier to turn a thought into a plan and a
+                            plan into progress.</p>
+                        <div class="showcase-points"><span><svg class="icon " width="20" height="20" aria-hidden="true">
+                                    <use href="#i-pin"></use>
+                                </svg> Pin your most important notes</span><span><svg class="icon " width="20"
+                                    height="20" aria-hidden="true">
+                                    <use href="#i-sliders"></use>
+                                </svg> Personalize with color and Markdown</span><span><svg class="icon " width="20"
+                                    height="20" aria-hidden="true">
+                                    <use href="#i-bell"></use>
+                                </svg> Stay on time with local reminders</span></div>
+                    </div>
+                    <div class="showcase-images"><img src="assets/img/feature-notes.svg"
+                            alt="Illustration of color-coded notes and tasks" loading="lazy" /><img
+                            src="assets/img/feature-agenda.svg" alt="Illustration of AskWise daily agenda checklist"
+                            loading="lazy" /></div>
+                </div>
+            </div>
+        </section>
+        <section class="privacy-promo">
+            <div class="container privacy-promo-inner reveal">
+                <div class="privacy-orb"><img src="assets/img/chatpro-glass-mark.webp" alt="Glowing AskWise AI icon"
+                        loading="lazy" /></div>
+                <div class="privacy-promo-copy"><span class="section-kicker light-kicker">YOUR IDEAS, YOUR SPACE</span>
+                    <h2>Privacy is part of<br />the experience.</h2>
+                    <p>Your conversation history, notes, tasks, and original recordings live in your device’s private
+                        storage. Only content needed for the AI features you request is sent to relevant service
+                        providers.</p><a href="privacy/privacypolicy.html" class="text-link-on-dark">How we handle your data
+                        <svg class="icon " width="18" height="18" aria-hidden="true">
+                            <use href="#i-arrow-up-right"></use>
+                        </svg></a>
+                </div>
+                <div class="privacy-points"><span><svg class="icon " width="21" height="21" aria-hidden="true">
+                            <use href="#i-shield"></use>
+                        </svg> Local-first content storage</span><span><svg class="icon " width="21" height="21"
+                            aria-hidden="true">
+                            <use href="#i-cloud-off"></use>
+                        </svg> No AskWise account needed</span><span><svg class="icon " width="21" height="21"
+                            aria-hidden="true">
+                            <use href="#i-lock"></use>
+                        </svg> No sale of personal data</span></div>
+            </div>
+        </section>
+        <section class="section pricing-section" id="pricing">
+            <div class="container">
+                <div class="section-intro intro-center reveal"><span class="section-kicker"><span
+                            class="kicker-line"></span> FLEXIBLE PLANS</span>
+                    <h2>Start free. Go further <span class="text-gradient">with Pro.</span></h2>
+                    <p>All the essentials to get going, plus more headroom when you need it.</p>
+                </div>
+                <div class="billing-switch-wrap">
+                    <div class="billing-switch" role="group" aria-label="Select billing period"><button type="button"
+                            class="billing-option is-selected" data-billing="monthly"
+                            aria-pressed="true">Monthly</button><button type="button" class="billing-option"
+                            data-billing="yearly" aria-pressed="false">Yearly <span>Best value</span></button></div>
+                    <p class="billing-disclaimer">Actual prices appear in Google Play before you subscribe.</p>
+                </div>
+                <div class="pricing-grid">
+                    <article class="price-card free-card reveal">
+                        <div class="price-card-header">
+                            <div class="price-plan"><svg class="icon " width="19" height="19" aria-hidden="true">
+                                    <use href="#i-sparkles"></use>
+                                </svg> Free</div>
+                            <h3>Get things moving.</h3>
+                            <p>Essential tools for everyday productivity.</p>
+                            <div class="price-price">$0 <span>/ forever</span></div>
+                        </div>
+                        <div class="price-divider"></div>
+                        <ul class="price-benefits">
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Core AI chat access</li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> AI features with standard usage limits</li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Notes & daily agenda</li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Home screen widgets</li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Local reminders</li>
+                        </ul><a href="https://play.google.com/store/apps/details?id=com.chatpro.assistant"
+                            target="_blank" rel="noopener noreferrer" class="price-button free-button">Get started free
+                            <svg class="icon " width="17" height="17" aria-hidden="true">
+                                <use href="#i-arrow-up-right"></use>
+                            </svg></a>
+                    </article>
+                    <article class="price-card pro-card reveal">
+                        <div class="most-popular"><svg class="icon " width="17" height="17" aria-hidden="true">
+                                <use href="#i-crown"></use>
+                            </svg> ASKWISE PRO</div>
+                        <div class="price-card-header">
+                            <div class="price-plan"><svg class="icon " width="19" height="19" aria-hidden="true">
+                                    <use href="#i-bolt"></use>
+                                </svg> Everything in Free, plus</div>
+                            <h3>Unlock your momentum.</h3>
+                            <p>More room for the ideas that won’t stop.</p>
+                            <div class="pro-pricing"><strong>Pro</strong><span data-plan-copy>Monthly
+                                    subscription</span></div><small>Pricing, renewal terms and eligibility shown
+                                in-app.</small>
+                        </div>
+                        <div class="price-divider"></div>
+                        <ul class="price-benefits">
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Unlimited AI replies <small>subject to fair-use policies</small></li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Larger audio uploads</li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Priority responses</li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Enhanced meeting transcription workflow</li>
+                            <li><svg class="icon " width="17" height="17" aria-hidden="true">
+                                    <use href="#i-check"></use>
+                                </svg> Everything in the Free plan</li>
+                        </ul><a href="https://play.google.com/store/apps/details?id=com.chatpro.assistant"
+                            target="_blank" rel="noopener noreferrer" class="price-button pro-button">Discover AskWise
+                            Pro <svg class="icon " width="17" height="17" aria-hidden="true">
+                                <use href="#i-arrow-up-right"></use>
+                            </svg></a>
+                    </article>
+                </div>
+                <p class="pricing-note">Subscription availability and features may vary by version, region, and offer.
+                    Manage or cancel through Google Play. <a href="terms/termsandconditions.html">View subscription terms</a>.</p>
+            </div>
+        </section>
+        <section class="section faq-section" id="faq">
+            <div class="container faq-layout">
+                <div class="faq-section-intro reveal"><span class="section-kicker light-kicker"><span
+                            class="kicker-line"></span> GOOD TO KNOW</span>
+                    <h2>Questions?<br /><span>We’ve got answers.</span></h2>
+                    <p>Everything you need to feel confident with AskWise.</p><a
+                        href="https://sites.google.com/view/askwise/support" class="faq-support-link" target="_blank"
+                        rel="noopener noreferrer">Visit Help Center <svg class="icon " width="18" height="18"
+                            aria-hidden="true">
+                            <use href="#i-arrow-up-right"></use>
+                        </svg></a>
+                </div>
+                <div class="faq-wrapper reveal">
+                    <div class="accordion">
+                        <details class="faq-item">
+                            <summary><span>How does real-time AI web search work?</span><span class="faq-chevron"><svg
+                                        class="icon " width="20" height="20" aria-hidden="true">
+                                        <use href="#i-chevron-down"></use>
+                                    </svg></span></summary>
+                            <div class="faq-answer">
+                                <p>When you ask about recent events, weather, or other time-sensitive topics, AskWise
+                                    can look up live sources and show reference links alongside its answer. Availability
+                                    depends on internet access and AI service capabilities.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary><span>Where are my chats, recordings, and notes stored?</span><span
+                                    class="faq-chevron"><svg class="icon " width="20" height="20" aria-hidden="true">
+                                        <use href="#i-chevron-down"></use>
+                                    </svg></span></summary>
+                            <div class="faq-answer">
+                                <p>Chats, recordings, notes, and tasks are stored in private app storage on your Android
+                                    device. When you request AI answers or transcription, the content necessary to
+                                    process that request is sent to OpenAI. See our Privacy Policy for details.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary><span>Can I record meetings with my screen locked?</span><span
+                                    class="faq-chevron"><svg class="icon " width="20" height="20" aria-hidden="true">
+                                        <use href="#i-chevron-down"></use>
+                                    </svg></span></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Start a recording while AskWise is visible; an active microphone foreground
+                                    service may continue recording if you lock the screen or switch apps, subject to
+                                    Android permissions and device restrictions. Make sure you have permission to record
+                                    everyone involved.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary><span>How do I restore AskWise Pro on a new phone?</span><span
+                                    class="faq-chevron"><svg class="icon " width="20" height="20" aria-hidden="true">
+                                        <use href="#i-chevron-down"></use>
+                                    </svg></span></summary>
+                            <div class="faq-answer">
+                                <p>Sign in to Google Play with the same Google account used for the subscription. In
+                                    AskWise, open Settings and select Restore Purchases. If it still does not appear,
+                                    contact support with your purchase order ID (not your payment card details).</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary><span>How can I contact AskWise support?</span><span class="faq-chevron"><svg
+                                        class="icon " width="20" height="20" aria-hidden="true">
+                                        <use href="#i-chevron-down"></use>
+                                    </svg></span></summary>
+                            <div class="faq-answer">
+                                <p>Visit the Help &amp; Support page or email chatpro@techtornix.com. We will help with
+                                    app setup, subscriptions, recording, and privacy requests.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bottom-cta">
+            <div class="container">
+                <div class="bottom-cta-inner reveal">
+                    <div class="bottom-cta-art"><img src="assets/img/chatpro-app-icon.png"
+                            alt="AskWise Android app icon" loading="lazy" /></div>
+                    <div class="bottom-cta-copy"><span class="cta-kicker">YOUR NEXT BIG IDEA STARTS HERE</span>
+                        <h2>Make every day a little smarter.</h2>
+                        <p>Chat, capture, organize, and get on with what matters.</p>
+                    </div><a href="https://play.google.com/store/apps/details?id=com.chatpro.assistant"
+                        class="play-badge bottom-play" target="_blank" rel="noopener noreferrer"
+                        aria-label="Get AskWise on Google Play"><svg class="play-brand" viewBox="0 0 28 31"
+                            aria-hidden="true">
+                            <path fill="#32CE69" d="M1 1 15 15.5 1 30z" />
+                            <path fill="#00B8F5" d="m1 1 18 11-4 3.5z" />
+                            <path fill="#FBC03B" d="m15 15.5 12-7v14z" />
+                            <path fill="#F85166" d="M1 30 19 19l-4-3.5z" />
+                        </svg><span><small>GET IT ON</small><strong>Google Play</strong></span></a>
+                </div>
+            </div>
+        </section>
+        <script
+            type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AskWise: AI Chat Assistant","applicationCategory":"ProductivityApplication","operatingSystem":"Android","description":"AI chat, real-time web search, meeting summaries, smart notes and daily agenda for Android.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"TechTornix Solutions"}}</script>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand"><a class="brand" href="index.html"><img src="assets/img/chatpro-logo.png"
+                            width="44" height="44" alt="" /> <span>AskWise<span class="brand-dot">.</span></span></a>
+                    <p>Your smart AI companion for work, meetings, and everyday clarity. Made for Android by TechTornix
+                        Solutions.</p><a href="mailto:chatpro@techtornix.com" class="footer-email"><svg class="icon "
+                            width="17" height="17" aria-hidden="true">
+                            <use href="#i-mail"></use>
+                        </svg>chatpro@techtornix.com</a>
+                </div>
+                <div class="footer-group">
+                    <h3>Explore</h3><a href="index.html#features">Features</a><a href="index.html#how-it-works">How It
+                        Works</a><a href="index.html#pricing">Free & Pro</a><a href="index.html#faq">FAQs</a>
+                </div>
+                <div class="footer-group">
+                    <h3>Support</h3><a href="https://sites.google.com/view/askwise/support" target="_blank"
+                        rel="noopener noreferrer">Help Center</a><a href="https://sites.google.com/view/askwise/support"
+                        target="_blank" rel="noopener noreferrer">Contact Us</a><a
+                        href="https://sites.google.com/view/askwise/support" target="_blank"
+                        rel="noopener noreferrer">Knowledge Base</a><a
+                        href="https://play.google.com/store/apps/details?id=com.chatpro.assistant" target="_blank"
+                        rel="noopener noreferrer">Google Play</a>
+                </div>
+                <div class="footer-group">
+                    <h3>Legal</h3><a href="privacy/privacypolicy.html">Privacy Policy</a><a href="terms/termsandconditions.html">Terms &
+                        Conditions</a><a
+                        href="mailto:chatpro@techtornix.com?subject=AskWise%20Privacy%20Request">Privacy
+                        Requests</a><span class="footer-package">com.chatpro.assistant</span>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 AskWise. A product by <strong>TechTornix Solutions</strong>. All
+                    rights reserved.</span>
+                <div class="footer-bottom-links"><a href="privacy/privacypolicy.html">Privacy</a><a
+                        href="terms/termsandconditions.html">Terms</a><a href="https://sites.google.com/view/askwise/support"
+                        target="_blank" rel="noopener noreferrer">Support</a><a href="#top">Back to top ↑</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
